@@ -38,6 +38,7 @@ div img {
 }
 nav,
 main,
+footer,
 section {
   max-width: 1400px;
   margin: 0 auto;
@@ -56,13 +57,14 @@ section {
   font-size: 1rem;
   line-height: 26px;
   color: #727272;
+  margin-top: 10px;
 }
 
 .btn-primary {
   padding: 20px 25px;
   background: rgba(255, 144, 14, 1);
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -136,7 +138,7 @@ nav .logo a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 #quick-list {
   color: #727272;
@@ -152,7 +154,7 @@ nav .logo a {
 #feature-title {
     padding-left: 25px;
     border-left: 5px solid rgba(255, 144, 14, 1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .feature-card-container {
     margin-top: 30px;
@@ -165,7 +167,7 @@ nav .logo a {
     border-radius: 8px;
 }
 .card-title {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -175,7 +177,7 @@ nav .logo a {
     background: rgba(255, 144, 14, 1);
     color: white;
     border: none;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-top: -100px;
     margin-left: -80px;
@@ -184,6 +186,61 @@ nav .logo a {
     font-size: 3rem;
     font-weight: 700;
 }
+
+/* Fact Section Styles */
+.fact-card-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 100px;
+}
+.fact-card {
+    width: 240px;
+    height: 240px;
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.fact-card .fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.fact-card .fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Sponsor Section Style */
+#sponsor {
+    text-align: center;
+}
+.sponsor-card-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-card-container img {
+    filter: grayscale(100%);
+}
+/* Footer Section Style */
+footer {
+    height: 100px;
+    background: rgba(255, 144, 14, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer p {
+    font-size: 1.25rem;
+    color: #424242;
+}
+
 /* ============================================
     Responsive Styles 
 ==============================================*/
@@ -197,8 +254,9 @@ nav .logo a {
   .menu li {
     margin-top: 20px;
   }
-  .team-img-container {
+  .team-img-container,.fact-card-container,.sponsor-card-container {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
   #feature {
     gap: 20px;
@@ -206,6 +264,9 @@ nav .logo a {
   #experience-badge {
     margin-top: 10px;
     margin-left: 0;
+  }
+  .sponsor-card-container {
+    gap: 50px;
   }
 }
 
@@ -214,6 +275,10 @@ nav .logo a {
   #team,#feature {
     flex-direction: column;
   }
+  .fact-card-container {
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+  }
   #feature {
     gap: 20px;
   }
@@ -221,4 +286,9 @@ nav .logo a {
     margin-top: 10px;
     margin-left: 0;
   }
+  .sponsor-card-container {
+    justify-items: center;
+    gap: 30px;
+    grid-template-columns: repeat(2,1fr);
+}
 }
